@@ -39,9 +39,9 @@ WantedBy=multi-user.target
 ### 🔐 Security & Governance
 **Privileged Nesting: Securely handles nested containerization for complex workloads.
 Role-Based Access: Integrated Discord permission mapping for admin-only infrastructure commands.
-Auto-Cleanup: Automated daemon-trap protocols to prevent resource leaks.
+Auto-Cleanup: Automated daemon-trap protocols to prevent resource leaks.**
 
-© FeatherPlayz | Powered by FeatherPlayz**
+**© FeatherPlayz | Powered by FeatherPlayz**
 
 
 
