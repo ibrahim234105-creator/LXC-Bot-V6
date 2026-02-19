@@ -1,74 +1,18 @@
-# 🚀 LXC-Bot-V6
+# 🚀 LXC Bot V6 Management Bot
+**Advanced Infrastructure Automation for High-Density Virtualization.**
 
-- **⚡ Easy & Fast LXC Container Management**
-- ✨ **Quick Creations & Responses**
-- 🔐 **Secure Containers Creation**
-- ✅ **Made for Hosting Owners**
-- 🟢 **100% Free & Open-Source**
+LXC Bot V6 is a professional-grade Discord orchestration bot designed to manage Linux Containers (LXC) with speed and precision. Developed as the core backend for the FusionNodes hosting platform, this tool automates the lifecycle of virtualized environments using Python 3.10 and LXD.
 
-# Installation Guide
+## ⚡ Core Infrastructure Features
+- **Rapid Provisioning:** Zero-latency container creation using optimized cloud-images.
+- **Smart Resource Guard:** Real-time monitoring of host CPU/RAM thresholds to ensure 99.99% node stability.
+- **Dynamic Networking:** Automated IPv4/IPv6 port-forwarding and dynamic proxy management.
+- **Persistent State:** High-performance SQLite3 backend with Write-Ahead Logging (WAL) for transactional reliability.
 
-1) bash <(curl -fsSL https://raw.githubusercontent.com/hopingboyz/lxc-installer/main/lxc-installer.sh)
+## 🛠️ Deployment Framework
 
-**⚠️ IF YOU GET ERROR WHILE USING THE SCRIPT, TRY THE CODE BELOW!**
-**——————————————————————————————————————————————————————————————————————**
-
-sudo apt install snapd -y
-
-sudo systemctl enable --now snapd.socket
-
-sudo ln -s /var/lib/snapd/snap /snap
-
-sudo snap install lxd
-
-**——————————————————————————————————————————————————————————————————————**
-
-sudo usermod -aG lxd $USER
-newgrp lxd
-
-reboot
-
-sudo lxd init
-
-apt install python3-pip -y
-
-mkdir -p ~/.config/pip && echo -e "[global]\nbreak-system-packages = true" > ~/.config/pip/pip.conf
-
-sudo nano /etc/systemd/system/fusionodes.service
-
-Paste it:
-[Unit]
-Description=FusionNodes Discord Bot
-After=network.target
-
-[Service]
-User=root
-WorkingDirectory=/root
-
-Environment="PYTHONUNBUFFERED=1"
-Environment="DISCORD_TOKEN=YOUR_DISCORD_BOT_TOKEN"
-Environment="MAIN_ADMIN_ID=YOUR_ADMIN_ID"
-
-ExecStart=/usr/bin/python3 /root/bot.py
-
-Restart=always
-RestartSec=5
-
-[Install]
-WantedBy=multi-user.target
-
-
-
-sudo systemctl daemon-reload
-
-sudo systemctl restart fusionodes
-
-14) Add bot.py file.
-
-15) pip install discord
-
-16) pip install PyNaCl
-
-17) python3 bot.py
-
-# FeatherPlayz All Right Reserved
+### 1. Host Environment Prep
+```Install and initialize the LXD virtualization daemon```
+```sudo apt update && sudo apt install snapd -y```
+```sudo snap install lxd```
+```sudo lxd init --auto```
